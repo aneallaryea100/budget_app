@@ -1,6 +1,6 @@
 class EntitiesController < ApplicationController
   before_action :set_entity, only: %i[show edit update destroy]
- before_action :set_group, only: %i[create]
+  before_action :set_group, only: %i[create]
 
   # GET /entities or /entities.json
   def index
