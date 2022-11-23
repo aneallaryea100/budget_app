@@ -11,14 +11,14 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="flex-row">
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
 
   <div>
     <%= form.label :icon, style: "display: block" %>
-    <%= form.text_field :icon %>
+    <%= form.select :icon, [['👜'], ['🛒'], ['🏠'], ['🍕'], ['🍔'], ['🚐'] ] %>
   </div>
 
   <div>
