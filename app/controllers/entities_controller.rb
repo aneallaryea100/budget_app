@@ -1,5 +1,6 @@
 class EntitiesController < ApplicationController
   before_action :set_entity, only: %i[show edit update destroy]
+ before_action :set_group, only: %i[create]
 
   # GET /entities or /entities.json
   def index
@@ -12,6 +13,11 @@ class EntitiesController < ApplicationController
   # GET /entities/new
   def new
     @entity = Entity.new
+    @group = current_user.groups
+    @group_items = []
+    @group.map do |group|
+      @group_items << [group.name, group.id]
+    end
   end
 
   # GET /entities/1/edit
@@ -20,6 +26,7 @@ class EntitiesController < ApplicationController
   # POST /entities or /entities.json
   def create
     @entity = Entity.new(entity_params)
+    @group = current_user.groups.find_by(id: params[:group_id])
 
     respond_to do |format|
       if @entity.save
@@ -62,8 +69,12 @@ class EntitiesController < ApplicationController
     @entity = Entity.find(params[:id])
   end
 
+  def set_group
+    @group = Group.find(params[:group_id])
+  end
+
   # Only allow a list of trusted parameters through.
   def entity_params
-    params.require(:entity).permit(:name, :amount)
+    params.require(:entity).permit(:name, :amount, :group_id)
   end
 end

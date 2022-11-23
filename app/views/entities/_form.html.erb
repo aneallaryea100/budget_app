@@ -21,6 +21,10 @@
     <%= form.text_field :amount %>
   </div>
 
+  <%= form.label :Group, class: "form-input-label" %>
+   <%= form.select :group_id, options_for_select(@group_items), {}, { :class => 'form-select mb-2' } %>
+
+
   <div>
     <%= form.submit %>
   </div>
