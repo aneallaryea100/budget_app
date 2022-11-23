@@ -1,14 +1,28 @@
-<p style="color: green"><%= notice %></p>
+<h1 class="text-center mt-4">All Catagories </h1>
 
-<h1>Groups</h1>
+<div class="container">
+  <%@groups.each do |group|%>
+  <div class="row justify-content-md-center">
+    <div class="card text-white bg-dark mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <p class="w-100"><%= group.icon %></p>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><%=link_to group.name.capitalize , group_path(group), class:'underline text-color'%></h5>
+            <p class="card-text">Total Amount: $ <%= group.entities.sum(:amount) %></p>
+            <%= link_to 'View' , group_path(group), class:'btn btn-primary'%>
+            <p class="card-text text-color mt-2"><small class="text-muted">
+                created <%= time_ago_in_words(group.created_at) %> ago
+              </small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%end%>
 
-<div id="groups">
-  <% @groups.each do |group| %>
-    <%= render group %>
-    <p>
-      <%= link_to "Show this group", group %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New group", new_group_path %>
+  <div class='text-center mb-4'>
+    <%= link_to 'Add New Catagory', new_group_path, class: "btn btn-outline-primary mb-5" %>
+  </div>
