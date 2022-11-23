@@ -1,8 +1,15 @@
 <div>
     <h1 class="text-center">Track Budget</h1>
+    <%if user_signed_in?%>
+    <div class="text-center">
+    <%= button_to "Sign Out 🔑", destroy_user_session_path, method: :delete, class: 'btn btn-primary' %>
+
+    </div>
+    <%else%>
     <div class="text-center">
     <%= link_to "Sign Up 📝", new_user_registration_path, class: 'btn btn-primary' %>
     <%= link_to "Sign In 🔑", new_user_session_path, class: 'btn btn-primary' %>
     </div>
+    <%end%>
 </div>
 
