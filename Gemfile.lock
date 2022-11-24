@@ -73,6 +73,7 @@ GEM
     bootsnap (1.14.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    cancancan (3.4.0)
     capybara (3.38.0)
       addressable
       matrix
@@ -94,6 +95,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    diff-lcs (1.5.0)
     erubi (1.11.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -173,6 +175,23 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rexml (3.2.5)
+    rspec-core (3.12.0)
+      rspec-support (~> 3.12.0)
+    rspec-expectations (3.12.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-mocks (3.12.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-rails (6.0.1)
+      actionpack (>= 6.1)
+      activesupport (>= 6.1)
+      railties (>= 6.1)
+      rspec-core (~> 3.11)
+      rspec-expectations (~> 3.11)
+      rspec-mocks (~> 3.11)
+      rspec-support (~> 3.11)
+    rspec-support (3.12.0)
     rubyzip (2.3.2)
     selenium-webdriver (4.6.1)
       childprocess (>= 0.5, < 5.0)
@@ -222,6 +241,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  cancancan
   capybara
   debug
   devise
@@ -230,6 +250,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)
+  rspec-rails
   selenium-webdriver
   sprockets-rails
   stimulus-rails

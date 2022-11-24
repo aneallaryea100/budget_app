@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users 
+  root 'home#index'
   
   resources :groups
   resources :entities
@@ -7,5 +8,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root 'home#index'
+  
 end

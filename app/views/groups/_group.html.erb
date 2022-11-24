@@ -1,12 +1,12 @@
-<div id="<%= dom_id group %>">
-  <p>
-    <strong>Name:</strong>
-    <%= group.name %>
-  </p>
+<div id="<%= dom_id group %>" class="container d-flex justify-content-around">
 
-  <p>
-    <strong>Icon:</strong>
-    <%= group.icon %>
-  </p>
+    <p>
+        <%= group.icon %>
+    </p>
 
+    <p>
+      <%= group.name %>
+    </p>
+
+    <p class="card-text">Total Amount : $ <%= group.entities.sum(:amount) %></p>
 </div>
