@@ -1,12 +1,11 @@
-<div class="container">
+<div class="container-fluid bg-primary">
     <span class="title">TB💰</span>
     <nav>
         
         <ul class="nav justify-content-end">
         <%if user_signed_in? %>
-            <li class="nav-item"><%= link_to "Home 🏠", root_path, class: 'nav-link'%></li>
-            <li class="nav-item"><%= link_to "Transactions 💸", entities_path, class: 'nav-link'%></li>
-            <li class="nav-item"><%= link_to "Categories 📁", groups_path, class: 'nav-link'%></li>
+            <li class="nav-item text-light"><%= link_to "Home 🏠", root_path, class: 'nav-link'%></li>
+            <li class="nav-item text-light"><%= link_to "Categories 📁", groups_path, class: 'nav-link'%></li>
             <li class="nav-item"><%= button_to "Sign Out 🚪", destroy_user_session_path, method: :delete %></li>
             <%else%>
             <li><%= link_to "Sign Up 📝", new_user_registration_path %></li>

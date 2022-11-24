@@ -1,18 +1,19 @@
 
 <h1 class="text-center mt-4">Transactions</h1>
 <div class="container">
-  <h4 class='text-center'>Total Amount :- <%= @group.entities.sum(:amount)%>$</h4>
+  <h4 class='text-center'>Total Amount: $ <%= @group.entities.sum(:amount)%></h4>
+  <span class="text-begin"><%= link_to 'Back', :back, class: "btn btn-primary"%></span>
   <% @group.entities.order("created_at DESC").each do |entity| %>
 
-  <div class="row justify-content-md-center">
+  <div class="row justify-content-center">
     <div class="col-8 mt-4">
       <div>
-        <div class="bg-dark text-color card text-center shadow-lg mb-5 rounded">
+        <div class="bg-light text-color card text-center shadow-sm mb-5 rounded">
           <div class="card-body">
             <div>
               <h5 class="card-title text-color"><%= entity.name.capitalize%></h5>
             </div>
-            <div class="card-text text-color">Amount: <%= entity.amount%>$</div>
+            <div class="card-text text-color">Amount:$ <%= entity.amount%></div>
           </div>
           <div class="card-footer text-muted">
             <p> created <%= time_ago_in_words(entity.created_at) %> ago</p>
