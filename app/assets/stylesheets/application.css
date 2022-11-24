@@ -14,18 +14,18 @@
  *= require_self
  */
 
- .icon {
-    font-size: 6rem;
-    width: 100px;
-    text-align: center;
-    border: none;
-    background: #f8f8ff;
-  }
+.icon {
+  font-size: 6rem;
+  width: 100px;
+  text-align: center;
+  border: none;
+  background: #f8f8ff;
+}
 
-  .home{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: center;
-  }
+.home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
