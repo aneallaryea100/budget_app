@@ -1,15 +1,9 @@
-<div>
-    <h1 class="text-center">Track Budget</h1>
-    <%if user_signed_in?%>
-    <div class="text-center">
-    <%= button_to "Sign Out 🔑", destroy_user_session_path, method: :delete, class: 'btn btn-primary' %>
-
+<div class="home">
+    <h1 class="text-center m-5 ">Track Budget</h1>
+    <div class="form">
+    <%= link_to "Sign Up 📝", new_user_registration_path, class: 'btn btn-primary w-100 m-1' %>
+    <%= link_to "Sign In 🔑", new_user_session_path, class: 'btn btn-primary w-100 m-1' %>
     </div>
-    <%else%>
-    <div class="text-center">
-    <%= link_to "Sign Up 📝", new_user_registration_path, class: 'btn btn-primary' %>
-    <%= link_to "Sign In 🔑", new_user_session_path, class: 'btn btn-primary' %>
-    </div>
-    <%end%>
+    
 </div>
 
