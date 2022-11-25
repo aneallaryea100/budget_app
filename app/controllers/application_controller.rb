@@ -11,4 +11,8 @@ class ApplicationController < ActionController::Base
       u.permit(:name, :email, :password, :password_confirmation, :current_password)
     end
   end
+
+  def navbar
+    @users = current_user.name
+  end
 end
