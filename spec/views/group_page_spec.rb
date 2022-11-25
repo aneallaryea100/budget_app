@@ -42,7 +42,7 @@ RSpec.describe 'Group up page', type: :feature do
   end
 
   it 'shows the Catagoies in the navbar' do
-    expect(page).to have_content('Categories 📁')
+    expect(page).to have_content('User1 👤')
   end
 
   it 'shows the catagory name' do

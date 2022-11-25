@@ -13,6 +13,31 @@
  *= require_tree .
  *= require_self
  */
+a {
+  color: #18bc9c;
+  text-decoration: none;
+}
+
+.navcontain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.navist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 50px;
+}
+
+.navist li {
+  list-style: none;
+  margin: 0 10px;
+  color: honeydew;
+}
 
 .icon {
   font-size: 6rem;
@@ -35,4 +60,11 @@
   font-weight: 600;
   margin: 0.5rem;
   color: #f8f8ff;
+}
+
+.listbtn {
+  border: none;
+  color: #f8f8ff;
+  background-color: red;
+  border-radius: 0.2rem;
 }
