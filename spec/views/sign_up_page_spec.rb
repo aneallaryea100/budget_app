@@ -9,18 +9,16 @@ RSpec.describe 'Sign up page', type: :feature do
             with: 'test@example.com'
     fill_in 'user[password]',
             with: 'test123'
-    fill_in 'user[password_confirmation]',  
+    fill_in 'user[password_confirmation]',
             with: 'test123'
     click_button 'Sign up'
   end
 
-    it 'should have a name' do
-        expect(page).to have_content('Home 🏠')
-    end
+  it 'should have a name' do
+    expect(page).to have_content('Home 🏠')
+  end
 
-    it 'should sign up button an amount' do
-        expect(page).to have_content('Sign Up 📝')
-    end
-
-    
+  it 'should sign up button an amount' do
+    expect(page).to have_content('Sign Up 📝')
+  end
 end

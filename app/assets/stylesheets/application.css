@@ -29,3 +29,10 @@
   min-height: 100vh;
   justify-content: center;
 }
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0.5rem;
+  color: #f8f8ff;
+}

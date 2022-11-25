@@ -39,5 +39,5 @@ RSpec.describe 'Entity page', type: :feature do
 
   it 'shows the Catagoies in the navbar' do
     expect(page).to have_content('Categories 📁')
-  end    
+  end
 end

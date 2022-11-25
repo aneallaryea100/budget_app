@@ -1,17 +1,17 @@
 <div class="container-fluid bg-primary">
     <span class="title">TB💰</span>
-    <nav>
+    <nav class="navv">
         
         <ul class="nav justify-content-end">
         <%if user_signed_in? %>
             <li class="nav-item text-light"><%= link_to "Home 🏠", root_path, class: 'nav-link btn btn-primary'%></li>
             <li class="nav-item text-light"><%= link_to "Categories 📁", groups_path, class: 'nav-link btn btn-primary'%></li>
             <li class="nav-item"><%= button_to "Sign Out 🚪", destroy_user_session_path, method: :delete, class: 'nav-link btn btn-primary' %></li>
+            <p class="text-light bg-warning"><%= @users%> 👤</p>
             <%else%>
             <li><%= link_to "Sign Up 📝", new_user_registration_path, class: 'nav-link btn btn-primary' %></li>
             <li><%= link_to "Sign In 🔑", new_user_session_path, class: 'nav-link btn btn-primary' %></li>
         <%end%>
-        <p class="text-dark bg-warning"><%= @users%> 👤</p>
         </ul>
         
     </nav>

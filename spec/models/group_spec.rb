@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Group, type: :model do
   subject do
     Group.new(name: 'Lion Judah', icon: 'lion', user_id: 1)
-  end 
+  end
 
   before { subject.save }
 
@@ -21,5 +21,4 @@ RSpec.describe Group, type: :model do
       expect(subject.icon).to be_a_kind_of(String)
     end
   end
-
 end
