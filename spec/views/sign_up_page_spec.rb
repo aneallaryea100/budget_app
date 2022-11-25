@@ -14,11 +14,11 @@ RSpec.describe 'Sign up page', type: :feature do
     click_button 'Sign up'
   end
 
-  it 'should have a name' do
-    expect(page).to have_content('Home 🏠')
+  it 'should have app logo' do
+    expect(page).to have_content('TB💰')
   end
 
-  it 'should sign up button an amount' do
-    expect(page).to have_content('Sign Up 📝')
+  it 'should have a field label called name' do
+    expect(page).to have_content('Sign Out 🚪')
   end
 end

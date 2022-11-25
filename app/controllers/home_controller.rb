@@ -1,6 +1,9 @@
 class HomeController < ApplicationController
-  before_action :authenticate_user!
   def index
-    @users = current_user.name
+    # redirect_to groups_path if user_signed_in?
+    if user_signed_in?
+      redirect_to groups_path
+      @users = current_user.name
+    end
   end
 end
