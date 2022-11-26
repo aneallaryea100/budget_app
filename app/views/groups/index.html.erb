@@ -1,0 +1,24 @@
+<h1 class="text-center pb-1 bg-primary text-light">All Catagories </h1>
+
+<div class="containmains">
+  <%@groups.each do |group|%>
+      <div class="containerhh">
+        <div class="icondiv">
+          <p class="icon"><%= group.icon %></p>
+        </div>
+        <div class="textdiv">
+          <h5 class="namegroup"><%=link_to group.name.capitalize , group_path(group), class:'text-secondary'%></h5> 
+            <p class="createdat"><small class="">
+                created <%= time_ago_in_words(group.created_at) %> ago
+              </small></p>
+        </div>
+          <div class="">
+            <p class="">Total Amount: $ <%= group.entities.sum(:amount) %></p>
+            <%= link_to 'View' , group_path(group), class:'btn btn-primary'%>
+          </div>
+      </div>
+  <%end%>
+
+  <div class='text-center mb-4'>
+    <%= link_to 'Add New Catagory', new_group_path, class: "btn btn-outline-primary mb-5" %>
+  </div>

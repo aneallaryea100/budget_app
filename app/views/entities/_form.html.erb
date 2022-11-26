@@ -1,0 +1,22 @@
+<%= form_with(model: @entity, local:true) do |f| %>
+<div class="container">
+  <div class="form-group">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, class:"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount, class:"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :catagory %><br />
+     <%= f.select :group_id, options_for_select(@group_items), {}, { :class => 'form-control' } %>
+  </div>
+
+  <div class="submit-button">
+    <%= f.submit "save", class: "btn btn-success form-control" %>
+  </div>
+</div>
+<% end %>

@@ -1,0 +1,16 @@
+<div class="navcontain bg-primary">
+    <span class="title">TB💰</span>
+    <nav class="navv">
+        
+        <ul class="navist">
+        <%if user_signed_in? %>
+            <li class="namelist">Hello!, <%= @users%> 👤</li>
+            <li class="listbtn"><%= button_to "Sign Out 🚪", destroy_user_session_path,  class: "listbtn", method: :delete%></li>
+            <%else%>
+            <li><%= link_to "Sign Up 📝", new_user_registration_path, class: 'nav-link btn btn-primary' %></li>
+            <li><%= link_to "Sign In 🔑", new_user_session_path, class: 'nav-link btn btn-primary' %></li>
+        <%end%>
+        </ul>
+        
+    </nav>
+</div>
