@@ -7,7 +7,7 @@
  A mobile application where the user can create new accounts, sign in, create different cartegories and check the transactions he/she has done in the past. This is a great Ruby on Rails app to help you track your money and take records of your expenditure!
 
  # Demo
- ![link](https://safe-meadow-96564.herokuapp.com/)
+ [link](https://safe-meadow-96564.herokuapp.com/)
 
 # Quick view
 
