@@ -18,6 +18,31 @@ a {
   text-decoration: none;
 }
 
+.containerhh {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f5f5f5;
+  flex-wrap: wrap;
+  margin: 0.5rem auto;
+}
+
+.jack {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  flex-wrap: wrap;
+  margin: 0.5rem auto;
+  width: 15rem;
+}
+
+.textdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .navcontain {
   display: flex;
   justify-content: space-between;
@@ -44,7 +69,6 @@ a {
   width: 100px;
   text-align: center;
   border: none;
-  background: #f8f8ff;
 }
 
 .home {

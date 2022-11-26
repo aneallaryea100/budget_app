@@ -1,26 +1,22 @@
 <h1 class="text-center pb-1 bg-primary text-light">All Catagories </h1>
 
-<div class="container">
+<div class="containmains">
   <%@groups.each do |group|%>
-  <div class="row justify-content-center">
-    <div class="card text-dark bg-light mb-3" style="width: 60%;">
-      <div class="row g-0 ">
-        <div class="col-md-4 w-75">
+      <div class="containerhh">
+        <div class="icondiv">
           <p class="icon"><%= group.icon %></p>
         </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title"><%=link_to group.name.capitalize , group_path(group), class:'text-secondary'%></h5>
-            <p class="card-text">Total Amount: $ <%= group.entities.sum(:amount) %></p>
-            <%= link_to 'View' , group_path(group), class:'btn btn-primary'%>
-            <p class="card-text text-color mt-2"><small class="text-muted">
+        <div class="textdiv">
+          <h5 class="namegroup"><%=link_to group.name.capitalize , group_path(group), class:'text-secondary'%></h5> 
+            <p class="createdat"><small class="">
                 created <%= time_ago_in_words(group.created_at) %> ago
               </small></p>
-          </div>
         </div>
+          <div class="">
+            <p class="">Total Amount: $ <%= group.entities.sum(:amount) %></p>
+            <%= link_to 'View' , group_path(group), class:'btn btn-primary'%>
+          </div>
       </div>
-    </div>
-  </div>
   <%end%>
 
   <div class='text-center mb-4'>
